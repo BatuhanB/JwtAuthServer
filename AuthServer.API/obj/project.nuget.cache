@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "C5Z610/OdyXKq/uSLXvtJGxZDvUiaIkhiw5uv8Unt68LdMUQ2jb0DA5WQkpnECQ3mArfRzpd4ZA6cJnToFrYsg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\balib\\source\\repos\\AuthServer\\AuthServer.API\\AuthServer.API.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\balib\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "C:\\Users\\balib\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\balib\\.nuget\\packages\\swashbuckle.aspnetcore\\6.2.3\\swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
+    "C:\\Users\\balib\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.2.3\\swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",
+    "C:\\Users\\balib\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.2.3\\swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",
+    "C:\\Users\\balib\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.2.3\\swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512"
+  ],
+  "logs": []
+}
