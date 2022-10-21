@@ -3,12 +3,12 @@ namespace SharedLibrary.Dtos
 {
     public class ErrorDto
     {
-        public List<String> Errors { get; private set; }
+        public List<string>? Errors { get; private set; }
         public int IsShow { get; private set; }
 
         public ErrorDto()
         {
-            Errors = new List<String>();
+            Errors = new List<string>();
         }
         public ErrorDto(String error, bool isShow)
         {
