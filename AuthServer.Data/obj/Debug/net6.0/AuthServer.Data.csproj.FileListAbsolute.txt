@@ -15,3 +15,5 @@ C:\Users\balib\source\repos\AuthServer\AuthServer.Data\obj\Debug\net6.0\AuthServ
 C:\Users\balib\source\repos\AuthServer\AuthServer.Data\obj\Debug\net6.0\ref\AuthServer.Data.dll
 C:\Users\balib\source\repos\AuthServer\AuthServer.Data\bin\Debug\net6.0\SharedLibrary.dll
 C:\Users\balib\source\repos\AuthServer\AuthServer.Data\bin\Debug\net6.0\SharedLibrary.pdb
+C:\Users\balib\source\repos\AuthServer\AuthServer.Data\bin\Debug\net6.0\AuthServer.Data.runtimeconfig.json
+C:\Users\balib\source\repos\AuthServer\AuthServer.Data\obj\Debug\net6.0\AuthServer.Data.genruntimeconfig.cache

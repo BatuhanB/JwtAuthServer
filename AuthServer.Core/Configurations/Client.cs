@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace AuthServer.Core.Configurations
+﻿namespace AuthServer.Core.Configurations
 {
     public class Client
     {
