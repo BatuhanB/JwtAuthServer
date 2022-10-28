@@ -1,13 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "S6HRBxqv5Y00ruMp/KFFaJv6vG634YjlasP1AkLHLJ4RZJy78IOmA4KH3cCJkn3R/rVbTi9pYj9xCNiQMTTpCw==",
+  "dgSpecHash": "JLYsN3/wJydMNbFKHqVz52FdjmIlFXoCgMEFXiivzR4zst9mjkWiQ1VtS63+d1ekaPLwFdwvdY4h7fkWRwX9lQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\balib\\source\\repos\\AuthServer\\AuthServer.Service\\AuthServer.Service.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\balib\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
     "C:\\Users\\balib\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\6.0.10\\microsoft.aspnetcore.cryptography.internal.6.0.10.nupkg.sha512",
     "C:\\Users\\balib\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\6.0.10\\microsoft.aspnetcore.cryptography.keyderivation.6.0.10.nupkg.sha512",
     "C:\\Users\\balib\\.nuget\\packages\\microsoft.aspnetcore.identity.entityframeworkcore\\6.0.10\\microsoft.aspnetcore.identity.entityframeworkcore.6.0.10.nupkg.sha512",
-    "C:\\Users\\balib\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
+    "C:\\Users\\balib\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\balib\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.4\\microsoft.data.sqlclient.2.1.4.nupkg.sha512",
     "C:\\Users\\balib\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\2.1.1\\microsoft.data.sqlclient.sni.runtime.2.1.1.nupkg.sha512",
     "C:\\Users\\balib\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.10\\microsoft.entityframeworkcore.6.0.10.nupkg.sha512",

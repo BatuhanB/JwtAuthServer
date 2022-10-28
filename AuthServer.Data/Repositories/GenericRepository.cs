@@ -23,7 +23,6 @@ namespace AuthServer.Data.Repositories
         public async Task<IEnumerable<T>> GetAllAsync()
         {
             return await _dbSet.ToListAsync();
-
         }
 
         public async Task<T> GetByIdAsync(int id)
