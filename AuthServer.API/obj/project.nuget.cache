@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "BOQVlAPFJRkDfsG3C4Jdi1Oqxn7RmkX3x5QUYMH8gzr+aD3VNOMNYs/U7hrTFoUFvbHjSm1FOz9qA+WGg0+RLA==",
+  "dgSpecHash": "kfZhI5hTdbJthccaXNTRYWS5oGaHdWjD6BkzkX9k/3SHnBW9vupzbRI9YihDXE7QrCW2zDFh0uPOgA+jofl6rg==",
   "success": true,
   "projectFilePath": "C:\\Users\\balib\\source\\repos\\AuthServer\\AuthServer.API\\AuthServer.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\balib\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
+    "C:\\Users\\balib\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.0\\automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",
     "C:\\Users\\balib\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\6.0.10\\microsoft.aspnetcore.cryptography.internal.6.0.10.nupkg.sha512",
     "C:\\Users\\balib\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\6.0.10\\microsoft.aspnetcore.cryptography.keyderivation.6.0.10.nupkg.sha512",
     "C:\\Users\\balib\\.nuget\\packages\\microsoft.aspnetcore.identity.entityframeworkcore\\6.0.10\\microsoft.aspnetcore.identity.entityframeworkcore.6.0.10.nupkg.sha512",

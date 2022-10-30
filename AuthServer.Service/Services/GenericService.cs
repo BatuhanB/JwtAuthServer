@@ -1,5 +1,6 @@
 ﻿using AuthServer.Core.Repositories;
 using AuthServer.Core.Services;
+using AutoMapper;
 using Microsoft.EntityFrameworkCore;
 using SharedLibrary.Dtos;
 using System.Linq.Expressions;
@@ -10,31 +11,32 @@ namespace AuthServer.Service.Services
     {
         private readonly IUnitOfWork _unitOfWork;
         private readonly IGenericRepository<TEntity> _genericRepository;
-
-        public GenericService(IUnitOfWork unitOfWork, IGenericRepository<TEntity> genericRepository)
+        private readonly IMapper _mapper;
+        public GenericService(IUnitOfWork unitOfWork, IGenericRepository<TEntity> genericRepository,IMapper mapper)
         {
             _unitOfWork = unitOfWork;
             _genericRepository = genericRepository;
+            _mapper = mapper;
         }
 
         public async Task<Response<TDto>> AddAsync(TDto dto)
         {
-            var newEntity = ObjectMapper.Mapper.Map<TEntity>(dto);
-            await _genericRepository.AddAsync(newEntity);
+            var entity = _mapper.Map<TEntity>(dto);
+            await _genericRepository.AddAsync(entity);
             await _unitOfWork.CommitAsync();
-            var newDto = ObjectMapper.Mapper.Map<TDto>(newEntity);
-            return Response<TDto>.Success(newDto,200);
+            var addedDto = _mapper.Map<TDto>(entity); 
+            return Response<TDto>.Success(addedDto,200);
         }
 
         public async Task<Response<IEnumerable<TDto>>> GetAllAsync()
         {
-            var entities = ObjectMapper.Mapper.Map<List<TDto>>(await _genericRepository.GetAllAsync()); 
+            var entities = _mapper.Map<List<TDto>>(await _genericRepository.GetAllAsync()); 
             return Response<IEnumerable<TDto>>.Success(entities,200);
         }
 
         public async Task<Response<TDto>> GetByIdAsync(int id)
         {
-            var entity = ObjectMapper.Mapper.Map<TDto>(await _genericRepository.GetByIdAsync(id));
+            var entity = _mapper.Map<TDto>(await _genericRepository.GetByIdAsync(id));
             if(entity == null)
             {
                 return Response<TDto>.Fail(404,"Id not found!",true);
@@ -62,7 +64,7 @@ namespace AuthServer.Service.Services
             {
                 return Response<NoContentDto>.Fail(404,"Id not found!",true);
             }
-            var updateEntity = ObjectMapper.Mapper.Map<TEntity>(dto);
+            var updateEntity = _mapper.Map<TEntity>(dto);
             _genericRepository.Update(updateEntity);
             await _unitOfWork.CommitAsync();
             return Response<NoContentDto>.Success(204);
@@ -71,7 +73,7 @@ namespace AuthServer.Service.Services
         public async Task<Response<IEnumerable<TDto>>> Where(Expression<Func<TEntity, bool>> predicate)
         {
             var list = _genericRepository.Where(predicate);
-            var data = ObjectMapper.Mapper.Map<IEnumerable<TDto>>(await list.ToListAsync());
+            var data = _mapper.Map<IEnumerable<TDto>>(await list.ToListAsync());
             return Response<IEnumerable<TDto>>.Success(data,200);
         }
     }
