@@ -1,4 +1,7 @@
+using AuthServer.API.Extensions;
 using AuthServer.Service.Extensions;
+using Microsoft.Extensions.DependencyInjection;
+using SharedLibrary.Configurations;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,7 +12,12 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddServiceRegistration();
+builder.Services.AddApiService();
+
+
 var app = builder.Build();
+
+builder.Services.Configure<CustomTokenOptions>(app.Configuration.GetSection("TokenOptions"));
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
