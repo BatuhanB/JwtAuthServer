@@ -17,7 +17,7 @@ builder.Services.AddApiService();
 
 var app = builder.Build();
 
-builder.Services.Configure<CustomTokenOptions>(app.Configuration.GetSection("TokenOptions"));
+//builder.Services.Configure<CustomTokenOptions>(app.Configuration.GetSection("TokenOptions"));
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
