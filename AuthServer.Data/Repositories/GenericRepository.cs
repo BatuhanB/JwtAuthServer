@@ -32,14 +32,15 @@ namespace AuthServer.Data.Repositories
             return entity;
         }
 
-        public void Remove(int id)
+        public void Remove(T entity)
         {
-            var entity = _dbSet.Find(id);
             _dbSet.Remove(entity);
         }
 
         public T Update(T entity)
         {
+            // also that can be used but there is a differentiation => the method below way more faster than change state of entity
+            //_dbSet.Update(entity);
             _context.Entry(entity).State = EntityState.Modified;
             return entity;
         }

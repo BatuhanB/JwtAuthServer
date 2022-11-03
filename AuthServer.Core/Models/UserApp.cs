@@ -7,9 +7,9 @@ namespace AuthServer.Core.Models
     {
         public string City { get; set; }
 
-        public UserApp(string city)
+        public UserApp()
         {
-            City = city;
+
         }
     }
 }

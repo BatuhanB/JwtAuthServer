@@ -9,7 +9,6 @@ namespace AuthServer.API.Extensions
         public static IServiceCollection AddApiService(this IServiceCollection services)
         {
             var assembly = Assembly.GetExecutingAssembly();
-            services.AddScoped<ITokenService,TokenService>();
 
 
             return services;
