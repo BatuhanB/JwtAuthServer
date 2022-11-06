@@ -51,7 +51,7 @@ namespace AuthServer.Service.Services
             {
                 return Response<NoContentDto>.Fail(404,"Id not found!",true);
             }
-            _genericRepository.Remove(id);
+            _genericRepository.Remove(isExists);
             await _unitOfWork.CommitAsync();
             return Response<NoContentDto>.Success(204);
             

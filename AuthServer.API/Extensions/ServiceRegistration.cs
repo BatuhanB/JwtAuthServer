@@ -9,8 +9,6 @@ namespace AuthServer.API.Extensions
         public static IServiceCollection AddApiService(this IServiceCollection services)
         {
             var assembly = Assembly.GetExecutingAssembly();
-
-
             return services;
         }
     }

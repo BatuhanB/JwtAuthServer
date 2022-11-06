@@ -1,7 +1,5 @@
 using AuthServer.API.Extensions;
 using AuthServer.Service.Extensions;
-using Microsoft.Extensions.DependencyInjection;
-using SharedLibrary.Configurations;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,7 +9,7 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddServiceRegistration();
+builder.Services.AddServiceRegistration(builder.Configuration);
 builder.Services.AddApiService();
 
 
