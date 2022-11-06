@@ -27,37 +27,7 @@ namespace AuthServer.Service.Extensions
 
             services.AddDbContext<AppDbContext>(opt =>
             {
-                opt.UseSqlServer(connectionString: configuration.GetConnectionString("JwtAuthDb"), sqlOpt =>
-                {
-                    sqlOpt.MigrationsAssembly("AuthServer.Data");
-                });
-            });
-            services.AddIdentity<UserApp, IdentityRole>(opt =>
-            {
-                opt.User.RequireUniqueEmail = true;
-                opt.Password.RequireNonAlphanumeric = false;
-            }).AddEntityFrameworkStores<AppDbContext>().AddDefaultTokenProviders();
-
-            services.AddAuthentication(opt =>
-            {
-                opt.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-                opt.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-            }).AddJwtBearer(JwtBearerDefaults.AuthenticationScheme, opt =>
-            {
-                var tokenOptions = configuration.GetSection("TokenOptions").Get<CustomTokenOptions>();
-                opt.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters()
-                {
-                    ValidIssuer = tokenOptions.Issuer,
-                    ValidAudience = tokenOptions.Audience.FirstOrDefault(),
-                    IssuerSigningKey = SignService.GetSymetricSecurityKey(tokenOptions.SecurityKey),
-
-                    ValidateLifetime = true,
-                    ValidateIssuer = true,
-                    ValidateIssuerSigningKey = true,
-                    ValidateAudience = true,
-                    ClockSkew = TimeSpan.Zero
-
-                };
+                opt.UseSqlServer(configuration.GetConnectionString("AuthServerDb"));
             });
 
             services.AddAutoMapper(assmebly);
