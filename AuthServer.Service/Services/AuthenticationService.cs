@@ -14,12 +14,12 @@ namespace AuthServer.Service.Services
     {
         private IConfiguration Configuration { get; }
         private readonly List<Client> _clients;
-        private readonly TokenService _tokenService;
+        private readonly ITokenService _tokenService;
         private readonly UserManager<UserApp> _userManager;
         private readonly IUnitOfWork _unitOfWork;
         private readonly IGenericRepository<UserRefreshToken> _userRefreshTokenService;
 
-        public AuthenticationService(TokenService tokenService, UserManager<UserApp> userManager,
+        public AuthenticationService(ITokenService tokenService, UserManager<UserApp> userManager,
                                      IUnitOfWork unitOfWork, IConfiguration configuration,
                                      IGenericRepository<UserRefreshToken> userRefreshTokenService)
         {
